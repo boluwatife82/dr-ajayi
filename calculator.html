@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my calculator</title>
+    <style>
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .calculator {
+        background-color: black;
+        width: 400px;
+        height: 500px;
+        padding: 30px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border-radius: 10px;
+        border: 2px solid red;
+      }
+      .calculator-input {
+        font-size: 60px;
+        margin: auto;
+        color: white;
+        width: 100%;
+        border: none;
+        background-color: black;
+        text-align: right;
+        padding: 10px 30px;
+        box-sizing: border-box;
+        display: block;
+      }
+      .button-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 8px;
+        margin: 0 auto;
+      }
+
+      .button-container button {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: none;
+        font-size: 25px;
+        background-color: #323232;
+        color: aliceblue;
+        cursor: pointer;
+      }
+
+      .button-container button:hover {
+        background-color: darkgrey !important;
+      }
+      .width-2 {
+        width: 130px !important;
+        border-radius: 24px !important;
+        grid-column: span 2;
+      }
+      .grey {
+        background-color: #a5a5a5a5 !important;
+        color: black;
+      }
+      .orange {
+        background-color: #ff9f0a !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="calculator" class="calculator">
+      <div id="input_cover">
+        <input readonly id="calculator-input" class="calculator-input" />
+      </div>
+
+      <div id="button-container" class="button-container">
+        <button class="grey">C</button>
+        <button class="grey">DE</button>
+        <button class="grey">%</button>
+        <button class="grey">+</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="orange">x</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="orange">-</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="orange">÷</button>
+        <button class="width-2">0</button>
+        <button>.</button>
+        <button class="orange">=</button>
+      </div>
+    </section>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
